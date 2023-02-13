@@ -13,6 +13,10 @@ on:
         required: false
         default: World
         type: string
+      ref:
+        required: false
+        default: latest
+        type: string
 
 jobs:
   hello-world:
@@ -27,7 +31,7 @@ jobs:
           # github-server-url: https://git.t3.daimlertruck.com
           # https://github.com/JasonCubic/ga-hello-world
           repository: JasonCubic/ga-hello-world
-          ref: v0.0.1
+          ref: ${{ inputs.ref }}
           path: ./.github/actions/ga-hello-world
 
       - name: run a hello-world docker based GitHub Action
