@@ -1,16 +1,21 @@
-# https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action
+# https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions
 name: Hello World
 description: Greet someone and record the time
 inputs:
-  who-to-greet: # id of input
+  greeting:
+    description: the greeting to use
+    required: false
+    default: Hello
+  who-to-greet:
     description: Who to greet
     required: true
     default: World
 outputs:
-  time: # id of output
+  time:
     description: The time we greeted you
 runs:
   using: docker
   image: Dockerfile
   args:
+    - ${{ inputs.greeting }}
     - ${{ inputs.who-to-greet }}

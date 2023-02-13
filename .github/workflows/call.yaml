@@ -13,28 +13,19 @@ on:
         required: false
         default: World
         type: string
-      version:
-        required: false
-        default: latest
-        type: string
 
 jobs:
   hello-world:
     name: reusable workflow hello world
     runs-on: ${{ fromJSON(inputs.runs-on) }}
-    # runs-on: ${{ inputs.runs-on }}
 
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-        with:
-          # github-server-url: https://git.t3.daimlertruck.com
-          # https://github.com/JasonCubic/ga-hello-world
-          repository: JasonCubic/ga-hello-world
-          ref: ${{ inputs.version }}
-          path: ./.github/actions/ga-hello-world
+      - name: check GITHUB_REF
+        run: echo ${{ env.GITHUB_REF }}
 
       - name: run a hello-world docker based GitHub Action
-        uses: ./.github/actions/ga-hello-world
+        # https://docs.github.com/en/actions/learn-github-actions/variables
+        uses: JasonCubic/ga-hello-world@${{ env.GITHUB_REF }}
         with:
+          greeting: Hello
           who-to-greet: ${{ inputs.who-to-greet }}
