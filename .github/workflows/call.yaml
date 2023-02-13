@@ -20,11 +20,6 @@ jobs:
     runs-on: ${{ fromJSON(inputs.runs-on) }}
 
     steps:
-      - name: outside of container hello-world
-        run: |
-          echo "github.ref_name ${{github.ref_name}}"
-          echo "Hello $2"
-
       - name: run a hello-world docker based GitHub Action
         # https://docs.github.com/en/actions/learn-github-actions/variables
         uses: JasonCubic/ga-hello-world@v0.0.1
