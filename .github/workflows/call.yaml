@@ -23,6 +23,6 @@ jobs:
     steps:
       - name: run a hello-world docker based GitHub Action
         # https://github.com/JasonCubic/ga-hello-world
-        uses: JasonCubic/ga-hello-world@main
+        uses: JasonCubic/ga-hello-world@v0.0.1
         with:
           who-to-greet: ${{ inputs.who-to-greet }}
