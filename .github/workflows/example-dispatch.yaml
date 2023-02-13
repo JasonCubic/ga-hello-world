@@ -1,10 +1,10 @@
-name: hello-world-reusable-workflow-dispatch-test
+name: example dispatch hello-world reusable workflow dispatch
 
 on:
   workflow_dispatch: # Manually triggered by the user in GitHub repo on the Actions tab
 
 jobs:
-  hello-world-dispatch-example:
+  example-hello-world-dispatch:
     name: calls the hello-world reusable workflow that is in another repo
     # https://github.blog/2022-02-10-using-reusable-workflows-github-actions/
     # uses: USER_OR_ORG_NAME/REPO_NAME/.github/workflows/REUSABLE_WORKFLOW_FILE.yml@TAG_OR_BRANCH
