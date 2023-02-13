@@ -15,7 +15,7 @@ jobs:
     name: calls the hello-world reusable workflow module
     # https://github.blog/2022-02-10-using-reusable-workflows-github-actions/
     # uses: USER_OR_ORG_NAME/REPO_NAME/.github/workflows/REUSABLE_WORKFLOW_FILE.yml@TAG_OR_BRANCH
-    uses: JasonCubic/ga-hello-world/.github/workflows/call.yaml@main
+    uses: JasonCubic/ga-hello-world/.github/workflows/call.yaml@v0.0.1
     with:
       who-to-greet: reusable workflows rock!
       runs-on: '["ubuntu-latest"]'
