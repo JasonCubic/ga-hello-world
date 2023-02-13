@@ -20,5 +20,3 @@ jobs:
       runs-on: '["ubuntu-latest"]'
       who-to-greet: Developers
 ```
-
-</details>
