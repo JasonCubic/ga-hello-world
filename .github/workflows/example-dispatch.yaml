@@ -12,4 +12,5 @@ jobs:
     with:
       who-to-greet: reusable workflows rock!
       runs-on: '["ubuntu-latest"]'
+      version: v0.0.1
       # runs-on: '["self-hosted", "Linux", "X64"]'
