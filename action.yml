@@ -2,10 +2,6 @@
 name: Hello World
 description: Greet someone and record the time
 inputs:
-  greeting:
-    description: the greeting to use
-    required: false
-    default: Hello
   who-to-greet:
     description: Who to greet
     required: true
@@ -17,5 +13,4 @@ runs:
   using: docker
   image: Dockerfile
   args:
-    - ${{ inputs.greeting }}
     - ${{ inputs.who-to-greet }}
