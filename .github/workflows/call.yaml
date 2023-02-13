@@ -13,11 +13,6 @@ on:
         required: false
         default: World
         type: string
-      version:
-        description: version of the action to run
-        required: false
-        default: latest
-        type: string
 
 jobs:
   hello-world:
@@ -32,6 +27,6 @@ jobs:
 
       - name: run a hello-world docker based GitHub Action
         # https://docs.github.com/en/actions/learn-github-actions/variables
-        uses: JasonCubic/ga-hello-world@${{ inputs.version }}
+        uses: JasonCubic/ga-hello-world@latest
         with:
           who-to-greet: ${{ inputs.who-to-greet }}
