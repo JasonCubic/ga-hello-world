@@ -20,8 +20,8 @@ jobs:
     runs-on: ${{ fromJSON(inputs.runs-on) }}
 
     steps:
-      - name: check github.ref
-        run: echo ${{ github.ref }}
+      - name: check github.ref_name
+        run: echo ${{ github.ref_name }}
 
       # - name: run a hello-world docker based GitHub Action
       #   # https://docs.github.com/en/actions/learn-github-actions/variables
