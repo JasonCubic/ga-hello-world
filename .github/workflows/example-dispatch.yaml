@@ -11,5 +11,5 @@ jobs:
     uses: JasonCubic/ga-hello-world/.github/workflows/call.yaml@v0.0.5
     with:
       who-to-greet: reusable workflows rock!
-      runs-on: '["ubuntu-latest"]'
-      # runs-on: '["self-hosted", "Linux", "X64"]'
+      # runs-on: '["ubuntu-latest"]'
+      runs-on: '["self-hosted", "Linux", "X64"]'
