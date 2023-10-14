@@ -34,7 +34,7 @@ jobs:
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}'
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v1
 
       # https://github.com/Tiryoh/gha-jobid-action/blob/main/entrypoint.sh
       - name: get workflow file ${{ github.event.workflow }} job_id
