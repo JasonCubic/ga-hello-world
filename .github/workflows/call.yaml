@@ -6,7 +6,8 @@ on:
     inputs:
       runs-on:
         required: false
-        default: '["ubuntu-latest"]'
+        default: '["self-hosted"]'
+        # default: '["ubuntu-latest"]'
         type: string
       who-to-greet:
         description: Who to greet
