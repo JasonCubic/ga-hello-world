@@ -60,7 +60,7 @@ jobs:
         with:
           # github-server-url: https://git.t3.daimlertruck.com
           repository: JasonCubic/ga-hello-world
-          ref: v0.0.5
+          ref: main
           path: ./.github/actions/ga-hello-world
 
       #       - name: test ref values
