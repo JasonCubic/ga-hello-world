@@ -55,13 +55,13 @@ jobs:
       #   echo "ALREADY_IN_BOARD=false" >> $GITHUB_ENV
       # fi
 
-      # - name: Check out repository
-      #   uses: actions/checkout@v3
-      #   with:
-      #     # github-server-url: https://git.t3.daimlertruck.com
-      #     repository: JasonCubic/ga-hello-world
-      #     ref: v0.1.1
-      #     path: ./.github/actions/ga-hello-world
+      - name: Check out repository
+        uses: actions/checkout@v3
+        with:
+          # github-server-url: https://git.t3.daimlertruck.com
+          repository: JasonCubic/ga-hello-world
+          ref: v0.0.5
+          path: ./.github/actions/ga-hello-world
 
       #       - name: test ref values
       #         run: |
@@ -73,6 +73,7 @@ jobs:
       #           echo "github.job_workflow_sha: ${{ github.job_workflow_sha }}"
       - name: run a hello-world docker based GitHub Action
         # https://docs.github.com/en/actions/learn-github-actions/variables
-        uses: https://github.com/JasonCubic/ga-hello-world@v0.0.5
+        # uses: JasonCubic/ga-hello-world@v0.0.5
+        uses: ./.github/actions/ga-hello-world
         with:
           who-to-greet: ${{ inputs.who-to-greet }}
